@@ -19,7 +19,7 @@ COPY setup.* ./
 COPY requirements.txt ./
 
 RUN pip install -r requirements.txt
-RUN conda install -n DISeg -c conda-forge jupyterlab nodejs widgetsnbextension ipywidgets tensorflow-gpu tqdm -y
+RUN conda install -n DISeg -c conda-forge jupyterlab nodejs widgetsnbextension ipywidgets tqdm -y
 RUN conda run -n DISeg jupyter labextension install @jupyter-widgets/jupyterlab-manager
 #RUN pip install torch torchvision torchnet
 
